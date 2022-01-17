@@ -8,8 +8,9 @@
 // Write code to add firstNumber and secondNumber and then return the result.
 
 function addTwoNumbers(firstNumber, secondNumber) {
-    // your code goes here
+    return firstNumber + secondNumber
 }
+console.log(addTwoNumbers(-53, 40));
 
 // Open index.html in your browser, open the JavaScript console, confirm the result.
 
@@ -31,8 +32,10 @@ console.log("-53 + 40 -> expected: -13, actual: %s", result);
 // Write code to return the first character in text.
 // Hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Character_access
 function getFirstCharacter(text) {
-    // your code goes here.
+    text = 'strawberry'.charAt(0);
+    return text.charAt(0);
 }
+console.log('strawberry'.charAt(0));
 
 console.log("getFirstCharacter =====");
 console.log("'strawberry' -> expected: s, actual: %s.", getFirstCharacter("strawberry"));

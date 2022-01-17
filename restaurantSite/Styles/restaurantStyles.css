@@ -1,0 +1,45 @@
+/*
+Creator: Sweetlana Protsenko
+Date created: Jan 9,2022
+Date last modified:
+*/
+header,
+footer {
+  background-color: #f4a259;
+  color: #5b8e7d;
+  height: 100px;
+  text-align: center;
+  padding: 30px 10px 20px 10px;
+}
+h1 {
+  font-size: 2.5em;
+}
+body {
+  background-color: #f4e285;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0d1f2d;
+  max-width: 900px;
+  padding-left: 20px;
+}
+nav .btn:visited {
+  color: #0d1f2d(19, 6, 68);
+}
+nav .btn {
+  background-color: #8cb369;
+  color: #fef9ff;
+}
+nav .btn:hover {
+  font-weight: bold;
+}
+
+nav .btn:active {
+  font-weight: normal;
+}
+nav {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-top: 3px dashed #9b2226;
+  border-bottom: 3px dashed #546a7b;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
