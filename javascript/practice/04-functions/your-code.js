@@ -8,7 +8,7 @@
 // Write code to add firstNumber and secondNumber and then return the result.
 
 function addTwoNumbers(firstNumber, secondNumber) {
-    return firstNumber + secondNumber
+    return firstNumber + secondNumber;
 }
 console.log(addTwoNumbers(-53, 40));
 
@@ -49,7 +49,19 @@ console.log("'Olympus Mons' -> expected: O, actual: %s.", getFirstCharacter("Oly
 // The function should return the maximum of the three parameters.
 // Hint: use conditional statements (if/else) or Math functions inside your function to calculate
 // the correct result.
-// Write your code here:
+// Write your code here: 
+function max(a, b, c) {
+    let largest;
+    if (a > b && b > c) {
+        largest = a;
+    } else if (b > a && a > c) {
+        largest = b;
+    } else {
+        largest = c;
+    }
+    return largest;
+}
+console.log(max (11, 2, 1) + " is the maximum of the three parameters");
 
 // Uncomment the code below to verify your function is working.
 // console.log("max =====");
