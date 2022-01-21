@@ -71,7 +71,8 @@ console.log(max (11, 2, 1) + " is the maximum of the three parameters");
 // console.log("max(4, 987654321, 0) -> expected: 987654321, actual: %s", max(4, 987654321, 0));
 
 
-
+let nums = [2, 4, 6];
+nums.push(8);
 
 
 
