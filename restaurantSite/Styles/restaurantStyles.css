@@ -21,18 +21,18 @@ body {
   max-width: 900px;
   padding-left: 20px;
 }
-nav .btn:visited {
+.btn:visited {
   color: #0d1f2d(19, 6, 68);
 }
-nav .btn {
+.btn {
   background-color: #8cb369;
   color: #fef9ff;
 }
-nav .btn:hover {
+.btn:hover {
   font-weight: bold;
 }
 
-nav .btn:active {
+.btn:active {
   font-weight: normal;
 }
 nav {
