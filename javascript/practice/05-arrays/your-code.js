@@ -5,10 +5,17 @@
 // 1. FIND MAX
 // ============
 // Create a function named `findMax` that takes one parameter: an array of numbers named `numbers`.
+
 // Find the maximum number in the array and return it.
 // Tip: Start with 2 numbers in the array. Once the function works with 2 numbers, add a third, and so on.
 // Write your code here:
-
+var numbers = [4, 34, 50, -76];
+var m = Math.max(...numbers);
+var actual = function findMax(numbers) {
+    Math.max(...numbers);
+    
+}
+console.log(actual);
 
 // Open index.html in your browser, open the JavaScript console, confirm the result.
 
