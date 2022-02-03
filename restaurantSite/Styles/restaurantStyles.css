@@ -27,6 +27,7 @@ body {
 .btn {
   background-color: #8cb369;
   color: #fef9ff;
+  margin-bottom: 12px;
 }
 .btn:hover {
   font-weight: bold;
@@ -34,6 +35,12 @@ body {
 
 .btn:active {
   font-weight: normal;
+}
+i {
+  margin-top: 4px;
+  margin-bottom: 0px;
+  font-size: 45px;
+  color: #8cb369;
 }
 nav {
   padding-top: 4px;

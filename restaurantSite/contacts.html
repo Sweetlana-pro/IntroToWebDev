@@ -9,9 +9,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Restaurant</title>
+    <script src="validate.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script src="js/bootstrap.min.js"></script>
     <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/3af70ae4de.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+    <style>
+        input {
+           background-color: gainsboro;
+        }
+
+        input:valid {
+            background-color: #ddffdd;
+        }
+        input:invalid {
+            background-color: #f65e50;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,21 +38,24 @@
         </header>
         <nav>
 
-            <!--links to Contacts and Menue-->
-            <a class="btn badge-pill" href="index.html" style="margin-right: 50px;">Home</a>
+            <!--links to Home and Menue-->
+            <a href="index.html" style="margin-right: 50px;"><i class="fas fa-home" style="font-size:48px;color:#8cb369;"></i></a>
             <a class="btn badge-pill" href="menu.html" style="margin-right: 50px;">Menu</a>
             <a class="btn badge-pill" href="contacts.html">Contact Us</a>
 
         </nav>
-        <form action="submit.html" method="POST">
+        <form name="contactForm" action="submit.html" class="needs-validation" method="POST" onsubmit="return validate();" onreset="resetView;" novalidate>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" /><br />
+            <input type="text" id="name" name="name" required/>
+            <div class="invalid-feedback">
+                Name is required.
+            </div><br />
 
             <label for="email">Email:</label>
-            <input type="text id=" email" name="email" style="margin-top: 20px;" /><br />
+            <input type="email" id="email" name="email" style="margin-top: 20px;" required/><br />
 
             <label for="phoneNumber">Phone:</label>
-            <input type="text" id="phoneNumber" name="phoneNumber" style="margin-top: 20px;" /><br />
+            <input type="number" id="phoneNumber" name="phoneNumber" pattern="^\-d{16}$" style="margin-top: 20px;" required/><br />
 
             <!--Select reason for inquiry section-->
             <label for="inquiry">Reason for Inquiry:</label>
@@ -73,6 +93,7 @@
             <!--submit button-->
             <button class="btn badge-pill" type="submit" style="margin-left: 25%; margin-bottom: 20px";> Send Request</button>
             <!--<label for="submit">Send Request</label>-->
+
         </form>
         <footer>
 
@@ -82,6 +103,16 @@
 
         </footer>
     </main>
+<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
