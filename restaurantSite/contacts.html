@@ -10,13 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Restaurant</title>
     <script src="validate.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script src="js/bootstrap.min.js"></script>
     <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/3af70ae4de.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-   
     <style>
         input {
            background-color: gainsboro;
@@ -44,19 +43,28 @@
             <a class="btn badge-pill" href="contacts.html">Contact Us</a>
 
         </nav>
-        <form name="contactForm" action="submit.html" class="needs-validation" method="POST" onsubmit="return validate();" onreset="resetView;" novalidate>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required/>
-            <div class="invalid-feedback">
-                Name is required.
+        <form name="contactForm" class="needs-validation" onsubmit="return validate();" novalidate>
+            <div class="form-group col">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required/>
+                <div class="invalid-feedback">
+                    Name is required.
+                </div>
             </div><br />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" style="margin-top: 20px;" required/><br />
-
-            <label for="phoneNumber">Phone:</label>
-            <input type="number" id="phoneNumber" name="phoneNumber" pattern="^\-d{16}$" style="margin-top: 20px;" required/><br />
-
+            <div class="form-group col">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" style="margin-top: 20px;" required/>
+                <div class="invalid-feedback">
+                    Email is required.
+                </div><br />
+            </div><br />
+            <div class="form-group col">
+                <label for="phoneNumber">Phone:</label>
+                <input type="number" id="phoneNumber" name="phoneNumber" pattern="^\-d{16}$" style="margin-top: 20px;" required/>
+                <div class="invalid-feedback">
+                    Number is required.
+                </div>
+            </div><br />
             <!--Select reason for inquiry section-->
             <label for="inquiry">Reason for Inquiry:</label>
             <select id="inquiry" name="inquiry" style="margin-top: 20px;">
@@ -91,7 +99,7 @@
             <label for="choiceF">F</label><br />
 
             <!--submit button-->
-            <button class="btn badge-pill" type="submit" style="margin-left: 25%; margin-bottom: 20px";> Send Request</button>
+            <button class="btn badge-pill" action="/validate.js" type="submit" method="post" onclick="validate()" style="margin-left: 25%; margin-bottom: 20px";> Send Request</button>
             <!--<label for="submit">Send Request</label>-->
 
         </form>

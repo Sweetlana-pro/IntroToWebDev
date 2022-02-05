@@ -25,9 +25,27 @@
         h4 {
           background-color: #f4a259;
           text-align: center;  
-          color: #5b8e7d;
+          color: #474b49;
           font: bold;
           
+        }
+        
+        @keyframes grow {
+            0% { font-size: 0; }
+            100% { font-size: 50px; }
+        }
+
+        .grows {
+            animation-name: grow;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            
+        }
+        header {
+            height:15%;
+            background-color: #f4a259;
+            padding: 8px;
+
         }
     </style>
 
@@ -36,12 +54,19 @@
 <body>
     <noscript>
         <h2>This site is best viewed with JavaScript enabled.</h2>
+        
     </noscript>
     
     <div class="container">
         <main>
-            <header>
-                <h1>The World on a Plate</h1>
+            <header class="container">
+                <h1><i class="fas fa-bacon"></i>The World on a Plate<i class="fas fa-bacon"></i></h1>
+                <h4><strong> Restarant of international cuisine</strong></h4>
+                    <h1 class="grows" style="color:darkred"> We are opening a new location!</h1>
+                    <p><a target="_blank"
+                        href="https://www.google.com/maps/place/Avenida+Place+Shopping+Centre/@50.9469602,-114.0727271,16.75z/data=!3m1!5s0x537176b7c60bb837:0xa2b586ce64b092bc!4m8!1m2!2m1!1sMacleod+Trail,+Southeast+Calgary,+Calgary,+AB!3m4!1s0x537176b81f7bb947:0xf10eec7868c80e8b!8m2!3d50.9455261!4d-114.0693246">1245
+                        24 Street SW, Calgary, AB, Canada, T5O2W1</a><br />
+                        phone: 403-577-3241 </p>
 
             </header>
             <nav>
@@ -54,13 +79,13 @@
             </nav>
             
             <!--Section of reataurant description-->
-            <article>
+            <article>s
                 <div class="clearfix">
                     <div class="align-content-centers">
                         <img src="images/Manty400-150px.jpg" class="img-fluid" alt="photo of manty"
-                            style="width: 400px;" />
+                            style="width: 400px; margin-top: 4px;" />
                         <p>In our restaurant you will find your favorire food from all around the world. No need to buy
-                            expencive tickets and fly to the end of the Earth<br /> to taste something new or special
+                            expencive tickets and fly to the end of the Earth to taste something new or special
                             from far far away. Just come to The World on a Plate and enjoy <strong>all the best</strong>
                             from world wide cuisine.<br /> Dive in your memories or feel free to fly following your
                             fantasy. We are here to present you a bourderless taste of the world <strong>on your
