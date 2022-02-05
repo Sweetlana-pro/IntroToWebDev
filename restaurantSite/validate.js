@@ -1,3 +1,7 @@
+
+var phoneNumber = document.getElementById("phoneNumber");
+var x = document.forms["contactForm"];
+
 function validate() {
 
     contactForm.className = "needs-validation";
@@ -5,12 +9,12 @@ function validate() {
         contactForm.className = "was-validated";
         return false;
     }
-    var phoneNumber = document.forms["contactForm"]["phoneNumber"].value;
+    
     if (phoneNumber == "" || isNaN(phoneNumber)) {
         alert("Phone Number must be filled in with a numbers");
         return false
     }
-    let x = document.forms["contactForm"]["name"].value;
+    
     if (x = "") {
         alert("Name must be filled out");
         return false;
